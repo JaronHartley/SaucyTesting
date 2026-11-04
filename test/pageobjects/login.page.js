@@ -26,17 +26,17 @@ class LoginPage extends Page {
 
     get exit () {
         return $('//a[@id="logout_sidebar_link"]')
-    } 
-
+    }
     /**
      * a method to encapsule automation code to interact with the page
      * e.g. to login using username and password
      */
     credentials = {users: 
-        ["standard_user", "problem_user", "error_user", "visual_user"],
-        password: "secret_sauce"  
+        ["standard_user", "problem_user", "error_user", "visual_user", "performance_glitch_user", "locked_out_user"],
+        password: "secret_sauce",
+        badPass: "grossevilsauce"  
+
     }
-    
     
     async login (username, password) {
         await this.inputUsername.setValue(username);
